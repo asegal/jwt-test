@@ -1,0 +1,35 @@
+{
+  "name": "node-test",
+  "version": "0.0.1",
+  "author": "Amit Segal <asegal@gmail.com>",
+  "description": "A node.js app that sets a jwt cookie",
+  "main": "",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/asegal/node-test.git"
+  },
+  "scripts": {
+    "start": "node ./bin/server"
+  },
+  "contributors": [
+    {
+      "name": "Amit Segal",
+      "email": "asegal@gmail.com"
+    }
+  ],
+  "dependencies": {
+    "cookies": "^0.5.1",
+    "jsonwebtoken": "^5.4.1"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=0.4"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/nodeapps/helloworld/raw/master/LICENSE"
+    }
+  ],
+  "analyze": false
+}

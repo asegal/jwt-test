@@ -1,0 +1,20 @@
+#!/usr/bin/env node
+
+var http = require('http'),
+    Cookies = require('cookies'),
+    port = process.env.PORT,
+    url = 'http://localhost:' + port + '/',
+    jwt = require('jsonwebtoken'),
+    secret = process.env.JWT_SECRET;
+
+http.createServer(function (req, res) {
+  var cookies = new Cookies(req,res);
+  var payload = {id: 'testuser', role: 'tester'};
+  var token = jwt.sign(payload, secret);
+  cookies.set('jwt',token);
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.write(token);
+  res.end();
+}).listen(port);
+
+console.log('The http server has started at: ' + url);
